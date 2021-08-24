@@ -4,21 +4,28 @@ import type { RouteRecordRaw } from 'vue-router'
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
-    redirect: '/home'
+    redirect: '/login'
   },
   {
-    path: '/home',
-    name: 'Home',
-    component: () => import(/* webpackChunkName: "home" */ 'views/Home.vue')
+    path: '/login',
+    name: 'Login',
+    component: () =>
+      import(/* webpackChunkName: "home" */ 'views/login/Login.vue')
   },
   {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ 'views/About.vue')
+    path: '/main',
+    name: 'Main',
+    component: () =>
+      import(/* webpackChunkName: "main" */ 'views/main/Main.vue')
   }
+  // {
+  //   path: '/about',
+  //   name: 'About',
+  //   // route level code-splitting
+  //   // this generates a separate chunk (about.[hash].js) for this route
+  //   // which is lazy-loaded when the route is visited.
+  //   component: () => import(/* webpackChunkName: "about" */ 'views/About.vue')
+  // }
 ]
 
 const router = createRouter({

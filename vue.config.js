@@ -1,4 +1,4 @@
-const path = require('path')
+// const path = require('path')
 
 module.exports = {
   // 配置方式一：覆盖webpack内部的配置

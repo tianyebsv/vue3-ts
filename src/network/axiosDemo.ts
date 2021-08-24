@@ -5,7 +5,8 @@ axios
   .request({
     baseURL: BASE_URL,
     url: '/test',
-    method: 'GET'
+    method: 'GET',
+    timeout: TIME_OUT
   })
   .then((res) => {
     console.log(res)
